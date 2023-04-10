@@ -107,22 +107,14 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
-        <a
-          href="https://dub.sh/hassan-newsletter"
-          target="_blank"
-          rel="noreferrer"
-          className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
-        >
-          <span className="font-semibold">Subscribe to my newsletter</span> to
-          learn how I built roomGPT
-        </a>
+
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+          Generate your <span className="text-blue-600">dream</span> closet
         </h1>
         <p className="text-slate-500">
           {/* Obtained this number from Vercel: based on how many serverless invocations happened. */}
           <CountUp start={50000} end={141531} duration={1} separator="," />{" "}
-          rooms generated so far.
+          closets generated so far.
         </p>
         <ResizablePanel>
           <AnimatePresence mode="wait">
@@ -138,7 +130,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Choose your room theme.
+                        Choose your closet theme.
                       </p>
                     </div>
                     <DropDown
@@ -157,7 +149,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Choose your room type.
+                        Choose your closet type.
                       </p>
                     </div>
                     <DropDown
@@ -176,7 +168,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Upload a picture of your room.
+                        Upload a picture of your closet.
                       </p>
                     </div>
                   </div>
@@ -189,9 +181,8 @@ const Home: NextPage = () => {
                 </div>
               )}
               <div
-                className={`${
-                  restoredLoaded ? "visible mt-6 -ml-8" : "invisible"
-                }`}
+                className={`${restoredLoaded ? "visible mt-6 -ml-8" : "invisible"
+                  }`}
               >
                 <Toggle
                   className={`${restoredLoaded ? "visible mb-6" : "invisible"}`}
@@ -218,7 +209,7 @@ const Home: NextPage = () => {
               {restoredImage && originalPhoto && !sideBySide && (
                 <div className="flex sm:space-x-4 sm:flex-row flex-col">
                   <div>
-                    <h2 className="mb-1 font-medium text-lg">Original Room</h2>
+                    <h2 className="mb-1 font-medium text-lg">Original Closet</h2>
                     <Image
                       alt="original photo"
                       src={originalPhoto}
@@ -228,7 +219,7 @@ const Home: NextPage = () => {
                     />
                   </div>
                   <div className="sm:mt-0 mt-8">
-                    <h2 className="mb-1 font-medium text-lg">Generated Room</h2>
+                    <h2 className="mb-1 font-medium text-lg">Generated Closet</h2>
                     <a href={restoredImage} target="_blank" rel="noreferrer">
                       <Image
                         alt="restored photo"
@@ -271,7 +262,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-blue-500 rounded-full text-white font-medium px-4 py-2 mt-8 hover:bg-blue-500/80 transition"
                   >
-                    Generate New Room
+                    Generate New Closet
                   </button>
                 )}
                 {restoredLoaded && (
@@ -284,7 +275,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-white rounded-full text-black border font-medium px-4 py-2 mt-8 hover:bg-gray-100 transition"
                   >
-                    Download Generated Room
+                    Download Generated Closet
                   </button>
                 )}
               </div>
