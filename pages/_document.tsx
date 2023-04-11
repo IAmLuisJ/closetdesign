@@ -2,10 +2,10 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
-    let description = "Generate your dream room in seconds.";
+    let description = "Generate your dream closet in seconds.";
     let ogimage = "https://www.roomgpt.io/og-image.png";
-    let sitename = "roomGPT.io";
-    let title = "Dream Room Generator";
+    let sitename = "closetgpt.com";
+    let title = "Dream Closet Generator";
 
     return (
       <Html lang="en">

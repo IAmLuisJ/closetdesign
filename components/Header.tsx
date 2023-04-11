@@ -17,6 +17,11 @@ export default function Header() {
           closetGPT.com
         </h1>
       </Link>
+      <Link href="https://www.luisjuarez.tech" className="space-x-2">
+        <h1 className="text-xl font-bold mr-2 tracking-tight">
+          Created by iAmLuisJ
+        </h1>
+      </Link>
     </header>
   );
 }

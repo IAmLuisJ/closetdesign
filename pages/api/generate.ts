@@ -20,10 +20,10 @@ interface ExtendedNextApiRequest extends NextApiRequest {
 // Create a new ratelimiter, that allows 5 requests per 24 hours
 const ratelimit = redis
   ? new Ratelimit({
-      redis: redis,
-      limiter: Ratelimit.fixedWindow(5, "1440 m"),
-      analytics: true,
-    })
+    redis: redis,
+    limiter: Ratelimit.fixedWindow(5, "1440 m"),
+    analytics: true,
+  })
   : undefined;
 
 export default async function handler(
@@ -59,9 +59,9 @@ export default async function handler(
       input: {
         image: imageUrl,
         prompt:
-          room === "Gaming Room"
-            ? "a room for gaming with gaming computers, gaming consoles, and gaming chairs"
-            : `a ${theme.toLowerCase()} ${room.toLowerCase()}`,
+          room === "Closet"
+            ? "a closet with shelving and clothes organized"
+            : `a ${theme.toLowerCase()} closet}`,
         a_prompt:
           "best quality, extremely detailed, photo from Pinterest, interior, cinematic photo, ultra-detailed, ultra-realistic, award-winning",
         n_prompt:
@@ -101,10 +101,10 @@ export default async function handler(
   res.status(200).json(
     generatedImage
       ? {
-          original: originalImage,
-          generated: generatedImage,
-          id: roomId,
-        }
+        original: originalImage,
+        generated: generatedImage,
+        id: roomId,
+      }
       : "Failed to restore image"
   );
 }

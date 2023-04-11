@@ -103,7 +103,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>RoomGPT</title>
+        <title>ClosetGPT</title>
       </Head>
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
@@ -176,7 +176,7 @@ const Home: NextPage = () => {
               )}
               {restoredImage && (
                 <div>
-                  Here's your remodeled <b>{room.toLowerCase()}</b> in the{" "}
+                  Here's your remodeled <b>closet</b> in the{" "}
                   <b>{theme.toLowerCase()}</b> theme!{" "}
                 </div>
               )}
