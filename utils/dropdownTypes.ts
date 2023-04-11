@@ -6,12 +6,10 @@ export type themeType =
   | "Tropical";
 
 export type roomType =
-  | "Living Room"
-  | "Dining Room"
-  | "Bedroom"
-  | "Bathroom"
-  | "Office"
-  | "Gaming Room";
+  | "Walk-In closet"
+  | "Reach-In closet"
+  | "Armoir closet"
+  | "linen closet"
 
 export const themes: themeType[] = [
   "Modern",
@@ -21,10 +19,8 @@ export const themes: themeType[] = [
   "Vintage",
 ];
 export const rooms: roomType[] = [
-  "Living Room",
-  "Dining Room",
-  "Office",
-  "Bedroom",
-  "Bathroom",
-  "Gaming Room",
+  "Walk-In closet",
+  "Reach-In closet",
+  "Armoir closet",
+  "linen closet",
 ];

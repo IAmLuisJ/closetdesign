@@ -54,7 +54,7 @@ const Home: NextPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [photoName, setPhotoName] = useState<string | null>(null);
   const [theme, setTheme] = useState<themeType>("Modern");
-  const [room, setRoom] = useState<roomType>("Living Room");
+  const [room, setRoom] = useState<roomType>("Walk-In closet");
 
   const UploadDropZone = () => (
     <UploadDropzone
